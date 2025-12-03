@@ -1,0 +1,22 @@
+:root{
+    --width_1:400px;
+    --height_1:200px;
+
+    --width_1:300px;
+    --height_1:250px;
+}
+.dabba{
+    color:rgb(193, 196, 51);
+    background: teal;
+}
+.conatiner{
+    border-radius: 70%;
+    width:calc(var(--width_1) + 200px);
+    height: calc(var(--height_1) + var(--width_1));
+
+    background-color:#fff;
+    background-image:url(./oardefault.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+}

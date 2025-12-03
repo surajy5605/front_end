@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        HTML canvas example
+    </h1>
+    <canvas class="canva" width="1000" height="1000" id="myCanvas" style="border:9px solid #000; border-radius:50%;">
+
+    </canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx =canvas.getContext("2d");
+
+    
+
+
+        ctx.beginPath();
+        ctx.fillstyle="blue";
+        ctx.arc(502,510,20,0,2*Math.PI)
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.strokeStyle="brown";
+        ctx.moveTo(311
+        ,180);
+        ctx.lineTo(495,510);
+        ctx.lineWidth=10;
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.strokeStyle="green";
+        ctx.moveTo(489
+        ,70);
+        ctx.lineTo(500,510);
+        ctx.lineWidth=10;
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
