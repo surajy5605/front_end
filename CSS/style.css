@@ -14,7 +14,7 @@
   }
 
   h2 {
-    background-color:white;
+      background-color: white;
       text-align: center;
       font-weight: 300;
       font-family: "Playwrite DK Loopet", cursive;
@@ -22,72 +22,95 @@
   }
 
   h3 {
-    
-    background-color:aqua;
+      background-color: aqua;
       text-align: center;
       font-size: 40px;
-      animation: stretch 3s linear infinite running  ;}
-  
-   @keyframes stretch{
-        0%{
-            background-color: yellow;
-            transform: scale(1);
-    
-        }
-        100%{
-            background-color: blueviolet;
-            transform: scale(0.5);
-    
-        }
-    }
+      animation: shrinkText 3s linear infinite;
+  }
+
+  @keyframes shrinkText {
+      0% {
+          font-size: 20px;
+          color: black;
+      }
+
+      100% {
+          font-size: 60px;
+          color: blueviolet;
+      }
+  }
 
   h4 {
       text-align: center;
       font-size: 40px;
       font-family: "Bitcount Prop Single";
-      font-weight:500;
+      font-weight: 500;
       background-color: burlywood;
-      animation: right 3s linear infinite running  ;
+      animation: moveShrink 5s linear infinite;
+      animation-delay: 3s ease-out;
   }
-  @keyframes right{
-        from{
-            background-color: yellow;
-            translate: 200vw,0;
-            scale: 200%,1;
-    
-        }
-        to{
-            background-color: blueviolet;
-            translate:0 0 ;
 
-            scale:100%,1;
-    
-        }
-    }
+  @keyframes moveShrink {
+      0% {
+          transform: translateX(0);
+          font-size: 40px;
+      }
+
+      50% {
+          transform: translateX(1500px);
+
+      }
+
+      100% {
+          transform: translateX(0);
+          font-size: 40px;
+      }
+  }
 
   h5 {
       text-align: center;
-       font-size: 50px;
-       background-color: brown;
+      font-size: 50px;
+      background-color: brown;
+      animation: shrinkleft 5s linear infinite;
+      animation-delay: 3s ease-out;
+  }
+
+  @keyframes shrinkleft {
+      0% {
+          transform: translateX(0);
+          font-size: 40px;
+      }
+
+      50% {
+          transform: translateX(-1500px);
+
+      }
+
+      100% {
+          transform: translateX(0);
+          font-size: 40px;
+      }
   }
 
   .logo {
       margin: auto;
       width: 100%;
-      /* background: #000; */
+
   }
 
   img {
       margin: 40px 580px;
-       animation: logoRotate 3s linear infinite running  ;
+      animation: logoRotate 4s linear infinite running;
   }
-  @keyframes logoRotate{
-        0%{
-            transform: rotate(0deg);
-    
-        }
-        100%{
-            transform: rotate(360deg);
-    
-        }
-    }
+
+  @keyframes logoRotate {
+      0% {
+          transform: rotate(0deg);
+
+      }
+
+      100% {
+          transform: rotate(360deg);
+
+      }
+  }
