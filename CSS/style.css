@@ -25,18 +25,22 @@
       background-color: aqua;
       text-align: center;
       font-size: 40px;
-      animation: shrinkText 3s linear infinite;
+      animation: shrinkText 3s linear infinite alternate;
   }
 
   @keyframes shrinkText {
       0% {
-          font-size: 20px;
+          transform:scaleX(1);
+          letter-spacing: 2px;
           color: black;
+          background-color: aqua;
       }
 
       100% {
-          font-size: 60px;
-          color: blueviolet;
+          transform:scaleX(3);
+          letter-spacing: 5px;
+          color: green;
+           background-color: tomato;
       }
   }
 
@@ -47,23 +51,26 @@
       font-weight: 500;
       background-color: burlywood;
       animation: moveShrink 5s linear infinite;
-      animation-delay: 3s ease-out;
+      animation-delay: 3s ease-out alternate;
   }
 
   @keyframes moveShrink {
       0% {
           transform: translateX(0);
           font-size: 40px;
+          letter-spacing: 3px;
       }
 
       50% {
           transform: translateX(1500px);
+          letter-spacing: 6px;
 
       }
 
       100% {
           transform: translateX(0);
           font-size: 40px;
+          letter-spacing: 3px;
       }
   }
 
@@ -104,6 +111,25 @@
   }
 
   @keyframes logoRotate {
+      0% {
+          transform: rotate(0deg);
+
+      }
+
+      100% {
+          transform: rotate(360deg);
+
+      }
+  }
+  .loader{
+    border:2px solid rgb(255, 255, 255);
+    border-right-color:slateblue;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+     animation: loader 4s linear infinite running;
+  }
+   @keyframes loader {
       0% {
           transform: rotate(0deg);
 
