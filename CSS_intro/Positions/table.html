@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align:center;
+        }
+        .box {
+            border: 3px outset red;
+        }
+
+        .th {
+            border: 1px inset red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        with-out css
+    </h1>
+    <table border="3">
+        <tr>
+            <th rowspan="2">Heading</th>
+            <th>students</th>
+            <th colspan="3">details</th>
+        </tr>
+        <tr>
+            <th>Id </th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Roll No</th>
+        </tr>
+       <tr>
+         <th rowspan="4">student list</th>
+         <td>1</td>
+         <td>suraj</td>
+         <td>IT</td>
+         <td>24</td>
+
+       </tr>
+       <tr>
+        <td>2</td>
+         <td>mehfooz</td>
+         <td>IT</td>
+         <td>34</td>
+       </tr>
+       <tr>
+        <td>3</td>
+         <td>shivam</td>
+         <td>CS</td>
+         <td>25</td>
+       </tr>
+
+
+
+    </table>
+    <h2>
+        with css
+    </h2>
+    <table class="box">
+        <tr>
+
+            <th class="th">sr no</th>
+            <th class="th">name</th>
+            <th class="th">age</th>
+        <tr>
+
+        <tr>
+            <th class="th">1</th>
+            <th class="th">suraj</th>
+            <th class="th">23</th>
+        </tr>
+        <tr>
+            <th class="th">2</th>
+            <th class="th">shivam</th>
+            <th class="th">23</th>
+        </tr>
+        <tr>
+            <th class="th">3</th>
+            <th class="th">sneha</th>
+            <th class="th">23</th>
+
+    </table>
+
+
+
+    <table border="3">
+        <th rowspan="2"</th>
+        <th colspan="2">Average</th>
+        <th rowspan="2">Red eyes</th>
+
+        <tr>
+            <th>height</th>
+            <th>weight</th>
+        </tr>
+
+        <tr>
+            <td>males</td>
+            <td>1.9</td>
+            <td>00.3</td>
+            <td>40%</td>
+        </tr>
+        <tr>
+            <td>females</td>
+            <td>1.9</td>
+            <td>00.3</td>
+            <td>40%</td>
+        </tr>
+    </table>
+</body>
+
+</html>
