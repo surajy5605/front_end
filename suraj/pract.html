@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth Spiral Cover with Zoom</title>
+
+<style>
+    /* ===== Global ===== */
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: tomato;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* ===== Header ===== */
+    .box {
+        background-color: aqua;
+        font-size: 40px;
+        width: 80rem;
+        max-width: 100%;
+        height: 4rem;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ===== Cards ===== */
+    .cards {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        border-radius: 15px;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .container h1 {
+        margin: 5px 0;
+        font-size: 20px;
+    }
+
+    /* ===== Spiral Section ===== */
+    .spiral-wrapper {
+        border-radius: 50%;
+        height:350px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        overflow: hidden;
+        /* padding: 50px 0; */
+    }
+
+    svg {
+        width: 420px;
+        height: 420px;
+        animation: rotateZoom 0.8s linear infinite;
+        will-change: transform;
+    }
+
+    path {
+        fill: #fff;
+        stroke: black;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+        filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+    }
+
+    /* ===== Rotation + Zoom Animation ===== */
+    @keyframes rotateZoom {
+       
+        0% { transform: rotate(360deg) ; }
+        100% { transform: rotate(0deg) ; }
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="box">Cover Title</div>
+
+    <!-- Cards -->
+    <div class="cards">
+        <div class="container">
+            <h1>Card 1</h1>
+            <p>Content</p>
+        </div>
+        <div class="container">
+            <h1>Card 2</h1>
+            <p>Content</p>
+        </div>
+        <div class="container">
+            <h1>Card 3</h1>
+            <p>Content</p>
+        </div>
+    </div>
+
+    <!-- Spiral -->
+    <div class="spiral-wrapper">
+        <svg viewBox="-210 -210 420 420">
+            <path id="spiral"></path>
+        </svg>
+    </div>
+
+<script>
+    const path = document.getElementById("spiral");
+
+    const turns = 15;        // spiral density
+    const points = 8000;     // smoothness
+    const maxRadius = 250;
+
+    let d = "";
+    let prevX = 0;
+    let prevY = 0;
+
+    for (let i = 0; i <= points; i++) {
+        const t = i / points;
+        const angle = t * turns * 2 * Math.PI;
+        const radius = t * maxRadius;
+
+        const x = radius * Math.cos(angle);
+        const y = radius * Math.sin(angle);
+
+        if (i === 0) {
+            d += `M ${x} ${y}`;
+        } else {
+            const cx = (prevX + x) / 2;
+            const cy = (prevY + y) / 2;
+            d += ` Q ${prevX} ${prevY}, ${cx} ${cy}`;
+        }
+
+        prevX = x;
+        prevY = y;
+    }
+
+    path.setAttribute("d", d);
+</script>
+
+</body>
+</html>

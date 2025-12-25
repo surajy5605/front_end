@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        body{
+            position: relative;
+            top:70%;
+            left:50%;
+            height: 400px;
+            width: 400px;
+            
+
+        }
+        .round{
+
+        }
+
+        .loading{
+            display:flex;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            animation:loader 3s infinite alternate-reverse;
+
+        }
+
+        @keyframes loader{
+            0% {transform :rotateZoom(0deg);}
+            100%{transform: rotateZoom(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <span class="round"></span>
+        <span class="round"></span>
+        <span class="round"></span>
+        <span class="round"></span>
+
+    </div>
+</body>
+</html>
