@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            background-color: black;
+            color: white;
+            padding: 0 15px;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        .container img {
+            height: 30px;
+        }
+
+        .profile {
+            border-radius: 50%;
+        }
+
+        .text {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: auto; 
+            font-weight: bold;
+            
+        }
+
+        .menu span {
+            cursor: pointer;
+        }
+
+     
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 6px 30px 6px 8px;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .search-box img {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div style="width: 110px;">
+            <img src="bbc (1).png" alt="BBC Logo" style="height: 90px;">
+
+        </div>
+
+       
+        <img src="profile__2_-removebg-preview.png" alt="Profile" class="profile">
+
+        
+        <span class="text">Sign in</span>
+
+      
+        <div class="menu">
+            <span>News</span>
+            <span>Sport</span>
+            <span>Reel</span>
+            <span>Worklife</span>
+            <span>Travel</span>
+            <span>Future</span>
+            <span>More</span>
+
+           
+            <div class="search-box">
+                <input type="text" placeholder="Search">
+                <img src="search.png" alt="Search">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

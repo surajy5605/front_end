@@ -4,119 +4,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>loader</title>
-  <style>
-    .loader {
-      height: 140px;
-      width: 140px;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .dot {
-      width: 20px;
-      height: 20px;
-      background-color: black;
-      border-radius: 50%;
-      animation: loader 2s infinite ease-in-out;
-    }
-
-    .one {
-      animation-delay: 0.1s;
-    }
-
-    .two {
-      animation-delay: 0.4s;
-    }
-
-    .three {
-      animation-delay: 0.6s;
-    }
-
-    .four {
-      animation-delay: 0.8s;
-    }
-
-    @keyframes loader {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(20px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="loader">
-    <div class="dot one"></div>
-    <div class="dot two"></div>
-    <div class="dot three"></div>
-    <div class="dot four"></div>
-  </div>
-</body>
-
-</html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bouncing Dot Loader</title>
+  <title>Document</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
+      background-color: aqua;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0; /* optional background */
     }
 
-    .loader {
+    /* loader circle */
+    .loading {
+      height: 100px;
+      width: 100px;
+      background-color: rgb(0, 255, 85);
+      border-radius: 50%;
+      position: relative;
+      justify-content: center;
       display: flex;
-      gap: 10px;
+      align-items: center;
+      animation: spin 1.5s infinite ease-in-out;
     }
 
+    /* dots */
     .dot {
-      width: 20px;
-      height: 20px;
+      height: 14px;
+      width: 14px;
       background-color: black;
       border-radius: 50%;
-      animation: bounce 1s infinite ease-in-out;
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      
     }
 
-    .dot.one { animation-delay: 0s; }
-    .dot.two { animation-delay: 0.2s; }
-    .dot.three { animation-delay: 0.4s; }
-    .dot.four { animation-delay: 0.6s; }
+    /* 8 directions (every 45deg) */
+    .dot:nth-child(1) {
+      transform: rotate(0deg) translate(80px);
+    }
 
-    @keyframes bounce {
-      0%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-20px); }
+    .dot:nth-child(2) {
+      transform: rotate(45deg) translate(80px);
+    }
+
+    .dot:nth-child(3) {
+      transform: rotate(90deg) translate(80px);
+    }
+
+    .dot:nth-child(4) {
+      transform: rotate(135deg) translate(80px);
+    }
+
+    .dot:nth-child(5) {
+      transform: rotate(180deg) translate(80px);
+    }
+
+    .dot:nth-child(6) {
+      transform: rotate(225deg) translate(80px);
+    }
+
+    .dot:nth-child(7) {
+      transform: rotate(270deg) translate(80px);
+    }
+
+    .dot:nth-child(8) {
+      transform: rotate(315deg) translate(80px);
+    }
+
+    /* rotation animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
+
 </head>
+
 <body>
-  <div class="loader">
-    <div class="dot one"></div>
-    <div class="dot two"></div>
-    <div class="dot three"></div>
-    <div class="dot four"></div>
+  <div class="loading">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
+
+
 </body>
-</html> -->
+
+</html>

@@ -1,46 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loading</title>
+    <title>loader</title>
     <style>
-        body{
-            position: relative;
-            top:70%;
-            left:50%;
-            height: 400px;
-            width: 400px;
-            
-
-        }
-        .round{
-
-        }
-
-        .loading{
-            display:flex;
-            height: 200px;
-            width: 200px;
+        body {
             background-color: aqua;
-            animation:loader 3s infinite alternate-reverse;
+            margin: 0;
+            height: 100vh;
+
+
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            width: 70px;
+            background-color: aqua;
+            border-radius: 50%;
+            gap: 2px;
+            transform: rotate();
+            position: relative;
+            animation: circular 1s infinite ease-in-out;
+        }
+
+        @keyframes circular {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .text {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+
+        .round {
+            height: 14px;
+            width: 14px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
 
         }
 
-        @keyframes loader{
-            0% {transform :rotateZoom(0deg);}
-            100%{transform: rotateZoom(360deg);
+        .dot1 {
+            animation: fade 0.7s infinite ease-in-out;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
             }
+
+            100% {
+                opacity: 1;
+            }
+
+           
+
+            ;
+        }
+
+        .dot2 {
+
+            
+            animation:fade 0.9s infinite ease-in-out;
+        }
+
+
+
+        .dot3 {
+
+            
+            animation:fade 1.2s infinite ease-in-out;
+        }
+
+
+        .text {
+            position: baseline;
+        }
+
+        .one {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-40%);
+        }
+
+        .two {
+            right: 10px;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+
+        .three {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-40%);
+        }
+
+        .four {
+            left: 10px;
+            top: 50%;
+            transform: translateY(-40%);
         }
     </style>
 </head>
+
 <body>
     <div class="loading">
-        <span class="round"></span>
-        <span class="round"></span>
-        <span class="round"></span>
-        <span class="round"></span>
-
+        <div class="round one"></div>
+        <div class="round two"></div>
+        <div class="round three"></div>
+        <div class="round four"></div>
     </div>
+    <div class="text">
+        Loading<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
+    </div>
+   
+
 </body>
+
 </html>
