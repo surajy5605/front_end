@@ -6,26 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flexbox</title>
     <style>
-        .container {
-            background-color: aqua;
-            width: 100%;
-            height: 400px;
-            padding: 10px 20px;
-        }
+        .inline-flex{
+            display: inline flex;
+            border:2px solid black;
+            
 
-        .parent>.box {
-            height: 50px;
-            width: 50px;
-            background: black;
+
 
         }
+      
+        .inline-flex> div:first-child{
+            background: teal;
 
-        .parent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: inherit;
+        }
+        .inline-flex> div:last-child{
+            background: tomato;
+        }
+        .block{
+            display:block;
+            background: green;
 
+        }
+        .parent{
+            border: 2px solid green;
+            display:flow-root;
+        }
+        .son{
+            background: red;
+            float:right;
         }
     </style>
 
@@ -33,15 +41,27 @@
 
 
 <body>
-    <div class="container">
-        <div class="parent">
-            <div class="box c1"></div>
-            <div class="box c2"></div>
-            <div class="box c3"></div>
-            <div class="box c4"></div>
+
+   <div class="parent">
+    <div class="son">
+        <h1>hello</h1>
+    </div>
+
+   </div>
+
+
+
+    <div class="inline-flex">
+        <div>hello</div>
+            
+           <div>😁</div>
 
         </div>
     </div>
+    <span class="block">
+
+        <a>something</a>
+    </span>
 </body>
 
 </html>
