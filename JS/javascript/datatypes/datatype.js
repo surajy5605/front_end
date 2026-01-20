@@ -1,14 +1,24 @@
-let x= "suraj";
-let y= "yadav"
-
-console.log(x,y)
-
-var ans ="${x} ${y}"
 
 
-for (let i=0;i<5;i++)
-{
-    
-    
-    console.log(i)
-}
+
+
+
+
+
+let arr=[
+        1,2,3,
+       "shivam",
+         [true,false] ,
+         {age:16}
+         
+        ]
+        
+        arr[3]="suraj";
+        
+        console.log( arr);
+
+        function fuu(){
+           console.log(age);
+        };
+
+        console.log(typeof (fuu));
