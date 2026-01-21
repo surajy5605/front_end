@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        background-color: grey;
+        border-radius: 30px;
+        height: 600px;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .parent {
+        background-color: #dfdfdf;
+        border-radius: 30px;
+        height: 400px;
+        width: 100%;
+    }
+
+    .child {
+        background-color: tomato;
+        justify-content: center;
+        border-radius: 30px;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+
+
+    }
+
+    .btn {
+        background-color: black;
+        color: antiquewhite;
+        border-radius: 10px;
+        font-size: 8px;
+        height: 20px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+
+    }
+
+    .text {
+        text-align: center;
+        width: 150px;
+        height: 90px;
+        font-weight: bold;
+    }
+
+    .scroller{
+        display: flex;
+         justify-content: space-evenly;
+
+    }
+    .scroller>.img{
+       
+        height: 100px;
+        width: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        filter:grayscale();
+       
+       
+        
+
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="parent">
+            <div class="child">
+                <img src="oardefault.jpg" alt="logo" style="height: 30px;
+                width: 30px; border-radius: 50%; border:1px solid white ; margin-bottom: 10px; cursor: pointer;">
+                <div class="text"> Building digital, products, brands, and experience</div>
+                <div class="btn">Enter shots</div>
+
+            </div>
+            <div class="container">
+                <div class="scroller">
+                    <div class="img img-1" style="background-image: url(./nationalbank.png);"></div>
+                    <!-- <div class="img img-2" style="background-image: url(./airbnb.png);"></div> -->
+                    <div class="img img-3" style="background-image: url(./cocacola.png);"></div>
+                    <div class="img img-4" style="background-image: url(./adobe.png);"></div>
+                    <div class="img img-5" style="background-image: url(./subway.png);"></div>
+                    <div class="img img-6" style="background-image: url(./codecademy.png);"></div>
+                </div>
+            </div>
+
+    </div>
+</body>
+
+</html>
