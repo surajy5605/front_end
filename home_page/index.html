@@ -7,26 +7,52 @@
     <title>Document</title>
 </head>
 <style>
+    
     .main {
         background-color: grey;
         border-radius: 30px;
-        height: 600px;
+        height: 550px;
         width: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+
+
+
+    }
+
+    .collab {
+
+        font-size: 12px;
+        padding-top: 20px;
+
+        margin: auto;
+        width: 230px;
+        height: 50px;
+        font-weight: bold;
     }
 
     .parent {
         background-color: #dfdfdf;
         border-radius: 30px;
-        height: 400px;
+        height: 350px;
         width: 100%;
     }
 
+    .line {
+        margin: auto;
+        border-bottom: 1px solid rgb(176, 179, 178);
+        width: 499px;
+        height: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .child {
-        background-color: tomato;
+        background-color: rgb(173, 171, 171);
         justify-content: center;
         border-radius: 30px;
-        height: 300px;
+        height: 250px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -34,15 +60,32 @@
 
 
 
+
+    }
+
+    .ses {
+        transform: rotate(-11deg);
+        background-color: rgb(247, 243, 243);
+        color: rgb(15, 15, 13);
+        border-radius: 10px;
+        font-size: 6px;
+        font-weight: bolder;
+        height: 15px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .btn {
+        margin-top: 10px;
         background-color: black;
         color: antiquewhite;
         border-radius: 10px;
-        font-size: 8px;
+        font-size: 6px;
         height: 20px;
-        width: 50px;
+        width: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,28 +97,74 @@
 
     .text {
         text-align: center;
-        width: 150px;
-        height: 90px;
+        width: 170px;
+        height: 70px;
         font-weight: bold;
     }
 
-    .scroller{
+    .scroller {
         display: flex;
-         justify-content: space-evenly;
+        justify-content: space-evenly;
 
     }
-    .scroller>.img{
-       
+
+    .scroller>.img {
+
         height: 100px;
         width: 50px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        filter:grayscale();
-       
-       
-        
+        filter: grayscale();
+    }
+    .footer-text{
+        width:100px;
+    }
 
+    .footer {
+        text-align: left;
+        display: flex;
+        margin-top: 30px;
+        padding: 0px 80px;
+        font-size: 6px;
+        justify-content: space-between;
+
+    }
+
+    .icon1 {
+        background-image: url(./ux.png);
+        height: 15px;
+        width: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .icon2 {
+        background-image: url(./mobile.png);
+        height: 15px;
+        width: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .icon3 {
+        background-image: url(./design.png);
+        height: 15px;
+        width: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .icon4 {
+        background-image: url(./coding.png);
+        height: 15px;
+        width: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 </style>
 
@@ -83,10 +172,11 @@
     <div class="main">
         <div class="parent">
             <div class="child">
-                <img src="oardefault.jpg" alt="logo" style="height: 30px;
-                width: 30px; border-radius: 50%; border:1px solid white ; margin-bottom: 10px; cursor: pointer;">
+                <img src="profile.svg" alt="logo"
+                    style="height: 25px;
+                width: 25px; border-radius: 50%;border: solid rgb(218, 207, 207) 1px; margin-bottom: 10px; cursor: pointer;">
                 <div class="text"> Building digital, products, brands, and experience</div>
-                <div class="btn">Enter shots</div>
+                <div class="btn">Enter shots &#8599</div>
 
             </div>
             <div class="container">
@@ -99,8 +189,36 @@
                     <div class="img img-6" style="background-image: url(./codecademy.png);"></div>
                 </div>
             </div>
-
-    </div>
+            <div class="collab">
+                Collaborated with brands and agencies to create impactful results.
+            </div>
+            <div class="line">
+                <span class="ses">Services</span>
+            </div>
+            <div class="footer">
+                <div class="footer-text">
+                    <div class="icon1"></div>
+                    <h2>UX & UI</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="footer-text">
+                    <div class="icon2"></div>
+                    <h2>Web & Mobile App</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer-text">
+                    <div class="icon3"></div>
+                    <h2> Design & Creative</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer-text">
+                    <div class="icon4"></div>
+                    <h2>Development</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
