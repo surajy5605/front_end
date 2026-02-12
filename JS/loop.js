@@ -42,6 +42,22 @@
 // console.log(fact)
 
 
+// let start =1;
+// let end = 10;
 
-num=process.argv[2]
-for()
+// while( start<= end){
+//     console.log(start)
+//     start++;
+// }
+let given =5;
+ 
+ let start_1=1;
+ let result=1;
+
+ while(
+    start_1<=given){
+        result= result * start_1;
+        start_1++;
+    }
+    console.log(result)
+     
