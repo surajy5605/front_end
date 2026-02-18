@@ -12,7 +12,7 @@
 //     console.log(i)
 // }
 
-//print odd number between 1to 50//
+// // print odd number between 1to 50//
 // console.log("these are the even numbers")
 // for (i=1; i<=50;i++)
 //     if(i<11)
@@ -49,15 +49,34 @@
 //     console.log(start)
 //     start++;
 // }
-let given =5;
+// let given =5;
  
- let start_1=1;
- let result=1;
+//  let start_1=1;
+//  let result=1;
 
- while(
-    start_1<=given){
-        result= result * start_1;
-        start_1++;
-    }
-    console.log(result)
+//  while(
+//     start_1<=given){
+//         result= result * start_1;
+//         start_1++;
+//     }
+//     console.log(result)
      
+
+
+function prime(n){
+
+    for(i=2;i<n;i++){
+    
+        if(n % i === 0){
+        return false;
+        }
+    }
+    return true;
+}
+
+    for(let i=2;i<=100;i++){
+        if (prime(i)){
+            console.log(i);
+        }
+    }
+

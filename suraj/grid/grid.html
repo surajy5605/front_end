@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: rgb(182, 179, 179);
+
+
+    }
+
+    .cont {
+        height: 350px;
+        width: 100%;
+        display: grid;
+        /* justify-content: center;
+        align-items: center; */
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 100px;
+        gap: 20px;
+        background: #dfdfdf;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        color: white;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+
+    
+
+    .box {
+        background-color: blue;
+        border: 3px solid green;
+        /* height: 150px;
+        width: 150px; */
+
+    }
+
+    .c1 {
+        background-position: center;
+
+    }
+
+    .c2 {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .c3 {
+        background-position: center;
+    }
+
+    .c4 {
+        background-position: center;
+    }
+</style>
+
+<body>
+    <div class="cont">
+        <div class="box c1"
+            style="background-image: url(https://images.unsplash.com/photo-1765706729877-cf69f724921b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+            1</div>
+        <div class="box c2"
+            style="background-image: url(https://plus.unsplash.com/premium_photo-1751376887177-aab543b480fd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+            2</div>
+        <div class="box c3"
+            style="background-image: url(https://images.unsplash.com/photo-1766548730089-e446483315b1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+            3</div>
+        <div class="box c4"
+            style="background-image: url(https://media.istockphoto.com/id/1400120423/photo/first-light-of-the-day-shine-on-red-granite-rocks.jpg?s=1024x1024&w=is&k=20&c=baB3sVn8dSa_TpgyKKO7hxIn75m4CNxa_q9yRI8QFGo=);">
+            4</div>
+    </div>
+</body>
+
+</html>

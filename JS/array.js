@@ -32,3 +32,7 @@ const ans44=arr1.forEach((el)=>{
         console.log(`this is odd number ${el}`)
     }
 })
+
+
+
+
