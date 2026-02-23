@@ -24,15 +24,15 @@
 
 
 
-// for( i=1;i<11;i++)
-// {  j=i*i
-//     console.log(j)
-// }
+for( i=1;i<11;i++)
+{  j=i*i
+    console.log(j)
+}
 
-// for(i=1;i<11;i++)
-//    if(i%3==0)
-//    { console.log(i)
-//    }
+for(i=1;i<=1300;i++)
+   if(i%3==0)
+   { console.log(i)
+   }
 
 
 
@@ -63,20 +63,20 @@
      
 
 
-function prime(n){
+// function prime(n){
 
-    for(i=2;i<n;i++){
+//     for(i=2;i<n;i++){
     
-        if(n % i === 0){
-        return false;
-        }
-    }
-    return true;
-}
+//         if(n % i === 0){
+//         return false;
+//         }
+//     }
+//     return true;
+// }
 
-    for(let i=2;i<=100;i++){
-        if (prime(i)){
-            console.log(i);
-        }
-    }
+//     for(let i=2;i<=100;i++){
+//         if (prime(i)){
+//             console.log(i);
+//         }
+//     }
 
