@@ -1,0 +1,10 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "text": "hello",
+      "isError": false,
+      "isLoading": false
+    }
+  ]
+}

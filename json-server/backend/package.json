@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "json-server db.json --watch --port 8080"
+    "server": "json-server db.json --watch --port 8080"
   },
   "keywords": [],
   "author": "",
