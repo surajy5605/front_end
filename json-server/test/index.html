@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Search on Refresh</title>
+</head>
+<body>
+
+  <input 
+    type="text" 
+    id="searchInput" 
+    oninput="updateAPI()" 
+    placeholder="Search..."
+  />
+
+  <p id="apiLink"></p>
+
+  <script>
+    const words = ["superman", "batman", "aquaman", "antman", "Ironman", "Xmen"];
+
+    function getRandomWord() {
+      return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function updateAPI() {
+      const input = document.getElementById("searchInput").value;
+      const apiUrl = `http://www.omdbapi.com/?s=${encodeURIComponent(input)}`;
+      document.getElementById("apiLink").innerText = apiUrl;
+    }
+
+    // Run when page loads (refresh)
+    window.onload = function () {
+      const randomWord = getRandomWord();
+      document.getElementById("searchInput").value = randomWord;
+      updateAPI();
+    };
+  </script>
+
+</body>
+</html>
