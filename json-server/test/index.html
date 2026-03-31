@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Random Search on Refresh</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-  <input 
-    type="text" 
-    id="searchInput" 
-    oninput="updateAPI()" 
-    placeholder="Search..."
-  />
-
-  <p id="apiLink"></p>
-
-  <script>
-    const words = ["superman", "batman", "aquaman", "antman", "Ironman", "Xmen"];
-
-    function getRandomWord() {
-      return words[Math.floor(Math.random() * words.length)];
-    }
-
-    function updateAPI() {
-      const input = document.getElementById("searchInput").value;
-      const apiUrl = `http://www.omdbapi.com/?s=${encodeURIComponent(input)}`;
-      document.getElementById("apiLink").innerText = apiUrl;
-    }
-
-    // Run when page loads (refresh)
-    window.onload = function () {
-      const randomWord = getRandomWord();
-      document.getElementById("searchInput").value = randomWord;
-      updateAPI();
-    };
-  </script>
-
+  <h1 style="text-align:center">Local Storage Todo</h1>
+  <div 
+  style="
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  ">
+  <input type="text" placeholder="enter task..." id="taskVal"/>
+<button onclick="adTodo()">add</button>
+</div>
 </body>
+<script src="index.js"></script>
 </html>

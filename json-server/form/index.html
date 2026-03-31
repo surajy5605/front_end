@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<form id="myForm">
+    <label>Email</label>
+    <input type="text" id="email" placeholder="Email"><br><br>
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter your Password"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const token = generateToken();
+
+        // Create single object
+        const userData = {
+            email: email,
+            password: password,
+            token: token
+        };
+
+        // Store as one item
+        localStorage.setItem("user", JSON.stringify(userData));
+
+        console.log("Saved object:", userData);
+    });
+
+    function generateToken() {
+        return Math.random().toString(36).substring(2) + Date.now().toString(36);
+    }
+</script>
+
+</body>
+</html>
